@@ -485,6 +485,15 @@ weight = 15
 contentDir = "content/pl"
 languagedirection = "ltr"
 
+[languages.sv]
+title = "Kubernetes"
+description = "Production-Grade Container-orkestrering"
+languageName = "Svenska (Swedish)"
+languageNameLatinScript = "Svenska"
+weight = 7
+contentDir = "content/sv"
+languagedirection = "ltr"
+
 [languages.pl.params]
 time_format_blog = "01.02.2006"
 # A list of language codes to look for untranslated content, ordered from left to right.

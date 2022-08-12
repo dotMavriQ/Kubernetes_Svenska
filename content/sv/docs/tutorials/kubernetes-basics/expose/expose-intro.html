@@ -1,0 +1,103 @@
+---
+title: Hur du använder en Service för att lansera din App
+weight: 10
+---
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<body>
+
+<link href="/docs/tutorials/kubernetes-basics/public/css/styles.css" rel="stylesheet">
+
+<div class="layout" id="top">
+
+	<main class="content">
+
+		<div class="row">
+			<div class="col-md-8">
+    		<h3>Mål</h3>
+				<ul>
+					<li>Learn about a Service in Kubernetes</li>
+					<li>Förstå hur etiketter fungerar med labels och hur LabelSelector-objekt relaterar till en Service</li>
+					<li>Exponera en applikation utanför ett Kubernetes-kluster med en Service</li>
+				</ul>
+			</div>
+
+			<div class="col-md-8">
+			<h3>Översikt: Services för Kubernetes</h3>
+
+			<p>Kubernetes <a href="/docs/concepts/workloads/pods/">Poddar</a> är dödliga. Poddar har faktiskt en <a href="/docs/concepts/workloads/pods/pod-lifecycle/">livscykel</a>.När en arbetarnod dör förloras också skidorna som körs på noden.A <a href="/docs/concepts/workloads/controllers/replicaset/"> replikaset </a> kan sedan dynamiskt driva klustret tillbaka till önskat tillstånd via skapande av nya pods för att hålla din applikation igång.Som ett annat exempel kan du överväga s.k. "imaging" med 3 kopior.Dessa kopior är utbytbara;Front-end-systemet bör inte bry sig om backend-kopior eller ens om en pod går förlorad och återskapas.Som sagt, varje pod i ett Kubernetes-kluster har en unik IP-adress, till och med pods på samma nod, så det måste finnas ett sätt att automatiskt förena förändringar så att dina applikationer fortsätter att fungera.</p>
+
+			<p>En Service i Kubernetes är en abstraktion som definierar en logisk uppsättning pods och en policy för att få tillgång till dem. Services möjliggör en lös koppling mellan dependencies(beroenden) för pods.En tjänst definieras med YAML<a href="/docs/concepts/configuration/overview/#general-configuration-tips">(föredras) </a> eller JSON, som alla Kubernetes -objekt.Uppsättningen av skidor som är inriktade på en tjänst bestäms vanligtvis av en <i> labelselector </i> (se nedan för varför du kanske vill ha en tjänst utan att inkludera <code> selector </code> i specifikationen).</p>
+
+			<p>Även om varje pod har en unik IP-adress utsätts inte dessa IP:addresser utanför klustret utan en tjänst.Tjänster låter dina ansökningar ta emot trafik.Tjänster kan exponeras på olika sätt genom att ange en <code> typ </code> i ServicesPec:</p>
+			<ul>
+				<li><i>ClusterIP</i> (Standard) - Exponerar tjänsten på en intern IP i klustret.Denna typ gör att tjänsten endast nås från klustret.</li>
+				<li><i>NodePort</i> - Exponerar tjänsten på samma port i varje vald nod i klustret med NAT.Gör en tjänst tillgänglig utanför klustret med <code>&lt;NodeIP&gt;:&lt;NodePort&gt;</code>.Superset av ClusterIP.</li>
+				<li><i>LoadBalancer</i> - Skapar en extern lastbalanserare i det aktuella molnet (om det stöds) och tilldelar en fast, extern IP till tjänsten.Superset av NodePort.</li>
+				<li><i>ExternalName</i> - Kartlägger tjänsten till innehållet i <code>externalName</code> fältet (e.g. <code>foo.bar.example.com</code>), genom att returnera en <code>CNAME</code> med dess värde. Ingen proxying av något slag är inrättat.Denna typ kräver v1.7 eller högre <code>kube-dns</code>, eller CoreDNS version 0.0.8 eller högre.</li>
+			</ul>
+			<p>Mer information om olika typer av tjänster finns i<a href="/docs/tutorials/services/source-ip/">Användning av Source-IP</a>-guiden. Se även <a href="/docs/concepts/services-networking/connect-applications-service">Ansluta applikationer med Services</a>.</p>
+			<p>Observera dessutom att det finns vissa användningsfall med tjänster som inte definierar <code>selector</code> i specifikationen. En Service skapad utan <code>selector</code> kommer inte heller att skapa motsvarande Endpoints-objekt. Detta gör att användare manuellt kan kartlägga en tjänst till specifika slutpunkter.En annan möjlighet varför det inte kan finnas någon väljare är att du strikt använder <code>type: ExternalName</code>.</p>
+			</div>
+			<div class="col-md-4">
+				<div class="content__box content__box_lined">
+					<h3>Summering</h3>
+					<ul>
+						<li>Exponera Pods till extern trafik</li>
+						<li>Laddbalansera trafik över flera Pods</li>
+						<li>Hur man använder labels</li>
+					</ul>
+				</div>
+				<div class="content__box content__box_fill">
+						<p><i>En Kubernetes-Service är ett abstraktionslager som definierar en logisk uppsättning skidor och möjliggör exponering av yttre trafik, lastbalansering och serviceupptäckt för Pods.</i></p>
+				</div>
+			</div>
+		</div>
+		<br>
+
+		<div class="row">
+			<div class="col-md-8">
+				<h3>Services och Labels</h3>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-8">
+				<p>En Service rattar trafiken över en uppsättning Pods. Services är abstraktionen som gör att skidor kan dö och replikera i Kubernetes utan att påverka din ansökan. Upptäckt och dirigering bland berörda Pods (som frontend och backend-komponenter i en applikation) hanteras av Kubernetes Services.</p>
+				<p>Services - Matcha en uppsättning Pods med <a href="/docs/concepts/overview/working-with-objects/labels">labels och selectors</a>, en gruppering primitiv som tillåter logisk drift på objekt i Kubernetes. Labels(Etiketter) är nyckel-/värdepar som är anslutna till objekt och kan användas på vilket antal sätt som helst:</p>
+				<ul>
+					<li>Ange objekt för utveckling, test och produktion</li>
+					<li>Bädda in versionstaggar</li>
+					<li>Klassificera ett objekt med taggar</li>
+				</ul>
+			</div>
+			
+		</div>
+
+		<br>
+
+		<div class="row">
+			<div class="col-md-8">
+				<p><img src="/docs/tutorials/kubernetes-basics/public/images/module_04_labels.svg"></p>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-8">
+				<p>Labels kan fästas på objekt vid skapelsetiden eller senare.De kan modifieras när som helst.Låt oss skapa vår ansökan nu med en Service och applicera några Labels.</p>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-12">
+				<a class="btn btn-lg btn-success" href="/docs/tutorials/kubernetes-basics/expose/expose-interactive/" role="button">Starta interaktiv guide<span class="btn__next">›</span></a>
+			</div>
+		</div>
+	</main>
+</div>
+
+</body>
+</html>

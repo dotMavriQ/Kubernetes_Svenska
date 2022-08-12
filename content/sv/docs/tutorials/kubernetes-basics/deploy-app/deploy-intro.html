@@ -1,0 +1,114 @@
+---
+title: Using kubectl to Create a Deployment
+weight: 10
+---
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<body>
+
+    <link href="/docs/tutorials/kubernetes-basics/public/css/styles.css" rel="stylesheet">
+
+<div class="layout" id="top">
+
+    <main class="content">
+
+        <div class="row">
+
+         <div class="col-md-8">
+          <h3>Mål</h3>
+                <ul>
+                    <li>Lär dig mer om applikationsdistributioner.</li>
+                    <li>Distribuera din första app på Kubernetes med Kubectl.</li>
+                </ul>
+            </div>
+
+            <div class="col-md-8">
+                <h3>Kubernetes implementeringar</h3>
+                <p>
+                När du har startat ett Kubernetes-kluster kan du distribuera dina containeriserade applikationer ovanpå det.
+                För att göra det skapar du en Kubernetes <b> distribution </b> konfiguration.Distributionen instruerar Kubernetes
+                Hur man skapar och uppdaterar instanser av din applikation.När du har skapat en distribution, Kubernetes
+                Kontrollplanet schemalägg de applikationsinstanser som ingår i den distributionen för att köras på enskilda noder i
+                klunga.
+                </p>
+
+                <p>När applikationsinstanserna har skapats övervakar en distributionskontroll kontinuerligt dessa fall.Om noden som är värd för en instans går ner eller raderas ersätter distributionskontrollen instansen med en instans på en annan nod i klustret.<b> Detta ger en självhelande mekanism för att hantera maskinfel eller underhåll.</b></p>
+
+                <p>I en värld före orkestrering skulle installationsskript ofta användas för att starta applikationer, men de tillät inte återhämtning från maskinfel.Genom att både skapa dina applikationsinstanser och hålla dem springa över noder ger Kubernetes -distributioner en grundläggande annan strategi för applikationshantering.</p>
+
+            </div>
+
+            <div class="col-md-4">
+                <div class="content__box content__box_lined">
+                    <h3>Sammanfattning:</h3>
+                    <ul>
+                        <li>Deploys</li>
+                        <li>Kubektl</li>
+                    </ul>
+                </div>
+                <div class="content__box content__box_fill">
+                    <p><i>
+                        En deploy ansvarar för att skapa och uppdatera instanser av din applikation
+                    </i></p>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h2 style="color: #3771e3;">Lansera din första app på Kubernetes</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <p><img src="/docs/tutorials/kubernetes-basics/public/images/module_02_first_app.svg"></p>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-md-8">
+
+                <p>Du kan skapa och hantera en distribution genom att använda Kubernetes -kommandoradsgränssnittet, <b> kubectl </b>.Kubectl använder Kubernetes API för att interagera med klustret.I den här modulen lär du dig de vanligaste KUBECTL-kommandona som behövs för att skapa distributioner som kör dina applikationer på ett Kubernetes -kluster.</p>
+
+                <p>När du skapar en distribution måste du ange behållarbilden för din applikation och antalet kopior som du vill köra.Du kan ändra informationen senare genom att uppdatera dina distributionsmoduler <a href="/docs/tutorials/kubernetes-basics/scale/scale-intro/">5</a> and <a href="/docs/tutorials/kubernetes-basics/update/update-intro/">6</a> of the bootcamp discuss how you can scale and update your Deployments.</p>
+
+
+
+
+            </div>
+            <div class="col-md-4">
+                <div class="content__box content__box_fill">
+                    <p><i> Applikationer måste förpackas i ett av de stödda behållarformaten för att kunna distribueras på Kubernetes</i></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+              <p>
+                För din första lansering använder du en Hello-Node-applikation förpackad i en Docker-behållare som använder Nginx för att återkalla alla förfrågningar.(Om du inte redan försökte skapa en Hello-Node-applikation och distribuera den med en behållare kan du göra det först genom att följa instruktionerna från<a href="/docs/tutorials/hello-minikube/">Hello Minikube tutorial</a>).
+              <p>
+              
+               <p>Nu när du vet vad lansering(Deploys) är, låt oss gå till onlineguiden och lansera vår första app!</p>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-md-12">
+                <a class="btn btn-lg btn-success" href="/docs/tutorials/kubernetes-basics/deploy-app/deploy-interactive/" role="button">Starta den interaktiva guiden <span class="btn__next">›</span></a>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

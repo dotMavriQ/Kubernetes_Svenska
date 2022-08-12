@@ -1,0 +1,137 @@
+---
+title: Hur man utför en rolling update
+weight: 10
+---
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<body>
+
+    <link href="/docs/tutorials/kubernetes-basics/public/css/styles.css" rel="stylesheet">
+
+
+<div class="layout" id="top">
+
+    <main class="content">
+
+        <div class="row">
+
+     <div class="col-md-8">
+          <h3>Mål</h3>
+                <ul>
+                    <li>Utför en rolling update med Kubectl.</li>
+                </ul>
+            </div>
+
+            <div class="col-md-8">
+            <h3>Uppdatering av en applikation</h3>
+
+            <p>Användare förväntar sig att applikationer ska vara tillgängliga hela tiden och utvecklare förväntas distribuera nya versioner av dem flera gånger om dagen.I Kubernetes görs detta med rullande uppdateringar.<b> Rolling Updates </b> Tillåter distributionens uppdatering att äga rum med noll driftstopp genom att stegvis uppdatera Podinstanser med nya. De nya pods kommer att planeras på noder med tillgängliga resurser.</p>
+
+            <p>I föregående modul skalade vi vår applikation för att köra flera instanser.Detta är ett krav för att utföra uppdateringar utan att påverka tillgängligheten för applikationer.Som standard är det maximala antalet skidor som kan vara otillgängliga under uppdateringen och det maximala antalet nya skidor som kan skapas.Båda alternativen kan konfigureras till antingen siffror eller procenttal (av skidor).
+            I Kubernetes är uppdateringar versionerade och alla distributionsuppdateringar kan återgås till en tidigare (stabil) version.</p>
+
+            </div>
+            <div class="col-md-4">
+                <div class="content__box content__box_lined">
+                    <h3>Summering:</h3>
+                    <ul>
+                        <li>Uppdatering av en app</li>
+                    </ul>
+                </div>
+                <div class="content__box content__box_fill">
+                    <p><i>Rolling updates låter distributionens uppdatering äga rum med noll driftstopp genom att stegvis uppdatera Pod-instanser med nya. </i></p>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h2 style="color: #3771e3;">Översikt: Rolling updates</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-8">
+                <div id="myCarousel" class="carousel" data-ride="carousel" data-interval="3000">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item carousel-item active">
+                          <img src="/docs/tutorials/kubernetes-basics/public/images/module_06_rollingupdates1.svg" >
+                        </div>
+
+                        <div class="item carousel-item">
+                          <img src="/docs/tutorials/kubernetes-basics/public/images/module_06_rollingupdates2.svg">
+                        </div>
+
+                        <div class="item carousel-item">
+                          <img src="/docs/tutorials/kubernetes-basics/public/images/module_06_rollingupdates3.svg">
+                        </div>
+
+                        <div class="item carousel-item">
+                          <img src="/docs/tutorials/kubernetes-basics/public/images/module_06_rollingupdates4.svg">
+                        </div>
+                      </div>
+
+                      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="sr-only ">Föregående</span>
+                      </a>
+                      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="sr-only">Nästa</span>
+                      </a>
+
+                    </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-md-8">
+
+                <p>I likhet med applikationsskalning, om en distribution utsätts offentligt, kommer tjänsten att ladda balansen endast trafiken för tillgängliga skidor under uppdateringen.En tillgänglig POD är en instans som är tillgänglig för användarna av applikationen.</p>
+
+                <p>Rolling updates Tillåt följande åtgärder:</p>
+                <ul>
+                    <li>Främja en applikation från en miljö till en annan (via containerbilduppdateringar)</li>
+                    <li>Rollback till tidigare versioner</li>
+                    <li>Kontinuerlig integration och kontinuerlig leverans av applikationer med noll driftstopp</li>
+
+                </ul>
+
+            </div>
+            <div class="col-md-4">
+                <div class="content__box content__box_fill">
+                    <p><i>Om en distribution utsätts offentligt kommer tjänsten att ladda balansen endast trafiken för tillgängliga skidor under uppdateringen.</i></p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-md-8">
+                <p> I följande interaktiva handledning uppdaterar vi vår applikation till en ny version och utför också en rollback.</p>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-md-12">
+                <a class="btn btn-lg btn-success" href="/docs/tutorials/kubernetes-basics/update/update-interactive/" role="button">Starta interaktiv guide <span class="btn__next">›</span></a>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
