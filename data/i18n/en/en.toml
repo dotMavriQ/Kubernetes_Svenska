@@ -1,13 +1,13 @@
 # i18n strings for the English (main) site.
 # NOTE: Please keep the entries in alphabetical order when editing
 [caution]
-other = "Caution:"
+other = "Varning:"
 
 [cleanup_heading]
-other = "Cleaning up"
+other = "Städar upp"
 
 [community_events_calendar]
-other = "Events Calendar"
+other = "evenemangskalender"
 
 [community_forum_name]
 other = "Forum"
@@ -28,52 +28,52 @@ other = "Twitter"
 other = "YouTube"
 
 [deprecation_title]
-other = "You are viewing documentation for Kubernetes version:"
+other = "Du tittar på dokumentation för Kubernetes version:"
 
 [deprecation_warning]
-other = " documentation is no longer actively maintained. The version you are currently viewing is a static snapshot. For up-to-date documentation, see the "
+other = "Dokumentation underhålls inte längre aktivt.Den version du för närvarande tittar på är en statisk snapshot.För aktuell dokumentation, se "
 
 [deprecation_file_warning]
-other = "Deprecated"
+other = "Avskriven"
 
 [dockershim_message]
-other = """Dockershim has been removed from the Kubernetes project as of release 1.24. Read the <a href="/dockershim">Dockershim Removal FAQ</a> for further details."""
+other = """Dockershim har tagits bort från Kubernetes-projektet från och med version 1.24. Läs <a href="/dockershim">Dockershim Removal FAQ</a> för mer information."""
 
 [docs_label_browse]
-other = "Browse Docs"
+other = "Bläddra dokument"
 
 [docs_label_contributors]
-other = "Contributors"
+other = "Bidragsgivare"
 
 [docs_label_i_am]
-other = "I AM..."
+other = "JAG ÄR..."
 
 [docs_label_users]
-other = "Users"
+other = "Användare"
 
 [docs_version_current]
-other = "(this documentation)"
+other = "(denna dokumentation)"
 
 [docs_version_latest_heading]
-other = "Latest version"
+other = "Senaste version"
 
 [docs_version_other_heading]
-other = "Older versions"
+other = "Gamla versioner"
 
 [end_of_life]
 other = "End of Life:"
 
 [envvars_heading]
-other = "Environment variables"
+other = "Miljöävariabler"
 
 [error_404_were_you_looking_for]
-other = "Were you looking for:"
+other = "Letade du efter:"
 
 [examples_heading]
-other = "Examples"
+other = "Exampel"
 
 [feature_state]
-other = "FEATURE STATE:"
+other = "Funktionsstatus:"
 
 [feedback_heading]
 other = "Feedback"
@@ -82,7 +82,7 @@ other = "Feedback"
 other = "No"
 
 [feedback_question]
-other = "Was this page helpful?"
+other = "Var den här sidan till hjälp?"
 
 [feedback_yes]
 other = "Yes"
@@ -91,134 +91,134 @@ other = "Yes"
 other = ","
 
 [input_placeholder_email_address]
-other = "email address"
+other = "emailaddress"
 
 [javascript_required]
-other = "JavaScript must be [enabled](https://www.enable-javascript.com/) to view this content"
+other = "JavaScript måste vara [aktiverat](https://www.enable-javascript.com/) för att kunna se detta innehåll"
 
 [latest_release]
-other = "Latest Release:"
+other = "Senaste Release:"
 
 [latest_version]
-other = "latest version."
+other = "Senaste version."
 
 [layouts_blog_pager_prev]
-other = "<< Prev"
+other = "<< Föregående"
 
 [layouts_blog_pager_next]
-other = "Next >>"
+other = "Nästa >>"
 
 [layouts_case_studies_list_tell]
-other = "Tell your story"
+other = "Berätta din historia"
 
 [layouts_docs_glossary_aka]
-other = "Also known as"
+other = "Även känd som"
 
 [layouts_docs_glossary_description]
-other = "This glossary is intended to be a comprehensive, standardized list of Kubernetes terminology. It includes technical terms that are specific to Kubernetes, as well as more general terms that provide useful context."
+other = "Denna ordlista är avsedd att vara en omfattande, standardiserad lista över Kubernetesterminologi. Det innehåller tekniska termer som är specifika för Kubernetes, samt mer allmänna termer som ger användbart sammanhang."
 
 [layouts_docs_glossary_deselect_all]
-other = "Deselect all"
+other = "Avmarkera alla"
 
 [layouts_docs_glossary_click_details_after]
-other = "indicators below to get a longer explanation for any particular term."
+other = "Indikatorer nedan för att få en längre förklaring till en viss term."
 
 [layouts_docs_glossary_click_details_before]
-other = "Click on the"
+other = "Klicka på"
 
 [layouts_docs_glossary_filter]
-other = "Filter terms according to their tags"
+other = "Filtertermer enligt deras taggar"
 
 [layouts_docs_glossary_select_all]
-other = "Select all"
+other = "Välj alla"
 
 [layouts_docs_partials_feedback_improvement]
-other = "suggest an improvement"
+other = "föreslå en förbättring"
 
 [layouts_docs_partials_feedback_issue]
-other = "Open an issue in the GitHub repo if you want to "
+other = "Öppna ett problem i GitHub-repo om du vill "
 
 [layouts_docs_partials_feedback_or]
-other = "or"
+other = "eller"
 
 [layouts_docs_partials_feedback_problem]
-other = "report a problem"
+other = "rapportera ett problem"
 
 [layouts_docs_partials_feedback_thanks]
-other = "Thanks for the feedback. If you have a specific, answerable question about how to use Kubernetes, ask it on"
+other = "Tack för feedbacken.Om du har en specifik, svarbar fråga om hur du använder Kubernetes, fråga den på"
 
 [layouts_docs_search_fetching]
-other = "Fetching results..."
+other = "Hämta resultat ..."
 
 [main_by]
-other = "by"
+other = "enligt"
 
 [main_cncf_project]
-other = """We are a <a href="https://cncf.io/">CNCF</a> graduated project</p>"""
+other = """Vi är ett <a href="https://cncf.io/">CNCF</a> graderat projekt</p>"""
 
 [main_community_explore]
-other = "Explore the community"
+other = "Utforska Communityt"
 
 [main_contribute]
-other = "Contribute"
+other = "Bidra"
 
 [main_copyright_notice]
-other = """The Linux Foundation &reg;. All rights reserved. The Linux Foundation has registered trademarks and uses trademarks. For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage" class="light-text">Trademark Usage page</a>"""
+other = """Linux Foundation &reg;. All rights reserved. Linux Foundation har registrerat varumärken och använder varumärken.För en lista över varumärken från Linux Foundation, se vår <a href="https://www.linuxfoundation.org/trademark-usage" class="light-text">Trademark Usage page</a>"""
 
 [main_documentation_license]
-other = """The Kubernetes Authors | Documentation Distributed under <a href="https://git.k8s.io/website/LICENSE" class="light-text">CC BY 4.0</a>"""
+other = """Kubernetes-författarna | Dokumentation distribuerad under <a href="https://git.k8s.io/website/LICENSE" class="light-text">CC BY 4.0</a>"""
 
 [main_github_invite]
-other = "Interested in hacking on the core Kubernetes code base?"
+other = "Intresserad av att hacking på Core Kubernetes-kodbasen?"
 
 [main_github_view_on]
-other = "View On GitHub"
+other = "Se På GitHub"
 
 [main_kubernetes_features]
-other = "Kubernetes Features"
+other = "Kubernetes Innehåll"
 
 [main_kubeweekly_baseline]
-other = "Interested in receiving the latest Kubernetes news? Sign up for KubeWeekly."
+other = "Intresserad av att få de senaste Kubernetes-nyheterna? Registrera dig för Kubeweekly."
 
 [main_kubernetes_past_link]
-other = "View past newsletters"
+other = "Visa tidigare nyhetsbrev"
 
 [main_kubeweekly_signup]
-other = "Subscribe"
+other = "Prenumerera"
 
 [main_page_history]
-other ="Page History"
+other ="Sidhistorik"
 
 [main_page_last_modified_on]
-other = "Page last modified on"
+other = "Senast modifierad"
 
 [main_read_about]
-other = "Read about"
+other = "Läs om"
 
 [main_read_more]
-other = "Read more"
+other = "Läs mer"
 
 [not_applicable]
 # Localization teams: it's OK to use a longer text here
 other = "n/a"
 
 [note]
-other = "Note:"
+other = "Notis:"
 
 [objectives_heading]
-other = "Objectives"
+other = "Mål"
 
 [options_heading]
-other = "Options"
+other = "Alternativ"
 
 [outdated_blog__message]
-other = "This article is more than one year old. Older articles may contain outdated content. Check that the information in the page has not become incorrect since its publication."
+other = "Den här artikeln är mer än ett år gammal. Äldre artiklar kan innehålla föråldrat innehåll. Kontrollera att informationen på sidan inte har blivit felaktig sedan publiceringen."
 
 [post_create_issue]
-other = "Create an issue"
+other = "Skapa en issue"
 
 [prerequisites_heading]
-other = "Before you begin"
+other = "Innan du börjar"
 
 [previous_patches]
 other = "Patch Releases:"
@@ -235,44 +235,44 @@ other = "(released: "
 other = "2006-01-02"
 
 [seealso_heading]
-other = "See Also"
+other = "Se även"
 
 [subscribe_button]
-other = "Subscribe"
+other = "Prenumerera"
 
 [synopsis_heading]
-other = "Synopsis"
+other = "Sammanfattning"
 
 [thirdparty_message]
-other = """This section links to third party projects that provide functionality required by Kubernetes. The Kubernetes project authors aren't responsible for these projects, which are listed alphabetically. To add a project to this list, read the <a href="/docs/contribute/style/content-guide/#third-party-content">content guide</a> before submitting a change. <a href="#third-party-content-disclaimer">More information.</a>"""
+other = """Det här avsnittet länkar till tredjepartsprojekt som tillhandahåller funktionalitet som krävs av Kubernetes. Kubernetes -projektförfattarna är inte ansvariga för dessa projekt, som listas alfabetiskt.För att lägga till ett projekt i den här listan, läs <a href="/docs/contribute/style/content-guide/#third-party-content">innehållsguiden</a> innan du skickar in en ändring. <a href="#third-party-content-disclaimer">Mer information.</a>"""
 
 [thirdparty_message_edit_disclaimer]
-other="""Third party content advice"""
+other="""Tredjepartsinnehållsråd"""
 
 
 [thirdparty_message_single_item]
-other = """&#128711; This item links to a third party project or product that is not part of Kubernetes itself. <a class="alert-more-info" href="#third-party-content-disclaimer">More information</a>"""
+other = """&#128711; Denna artikel länkar till ett tredjepartsprojekt eller en produkt som inte ingår i Kubernetes själv. <a class="alert-more-info" href="#third-party-content-disclaimer">Mer information</a>"""
 
 [thirdparty_message_disclaimer]
-other = """<p>Items on this page refer to third party products or projects that provide functionality required by Kubernetes. The Kubernetes project authors aren't responsible for those third-party products or projects. See the <a href="https://github.com/cncf/foundation/blob/master/website-guidelines.md" target="_blank">CNCF website guidelines</a> for more details.</p><p>You should read the <a href="/docs/contribute/style/content-guide/#third-party-content">content guide</a> before proposing a change that adds an extra third-party link.</p>"""
+other = """<p>Delar av denna sida hänvisar till tredjepartsprodukter eller projekt som tillhandahåller funktionalitet som krävs av Kubernetes. Kubernetes-projektförfattarna är inte ansvariga för dessa tredjepartsprodukter eller projekt. Se <a href="https://github.com/cncf/foundation/blob/master/website-guidelines.md" target="_blank">CNCF webbsideguidelines</a> för mer information.</p><p> Du borde läsa<a href="/docs/contribute/style/content-guide/#third-party-content">content guide</a> Innan du föreslår en förändring som lägger till en extra tredjepartslänk.</p>"""
 
 [ui_search_placeholder]
-other = "Search"
+other = "Sök"
 
 [version_check_mustbe]
-other = "Your Kubernetes server must be version "
+other = "Din Kubernetes-server måste vara version "
 
 [version_check_mustbeorlater]
-other = "Your Kubernetes server must be at or later than version "
+other = "Din Kubernetes -server måste vara på eller senare än version "
 
 [version_check_tocheck]
-other = "To check the version, enter "
+other = "För att kontrollera versionen, ange "
 
 [version_menu]
-other = "Versions"
+other = "Versioner"
 
 [warning]
-other = "Warning:"
+other = "Varning:"
 
 [whatsnext_heading]
-other = "What's next"
+other = "Vad kommer härnäst"
